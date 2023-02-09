@@ -1,15 +1,17 @@
+import { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 
 function ExpenseItem(props) {
+  const [title, setTitle] = useState(props.item.title);
   // Adding Event Listeners.
   const clickHandler = () => {
-    console.log("Clicked");
+    setTitle("New Title");
   };
   return (
     <div>
-      <ExpenseDate date={props.item[0].date} />
-      <p>{props.item[0].title}</p>
-      <p>{props.item[0].amount}</p>
+      <ExpenseDate date={props.item.date} />
+      <p>{title}</p>
+      <p>{props.item.amount}</p>
       <button onClick={clickHandler}>Click</button>
     </div>
   );

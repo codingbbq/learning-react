@@ -5,12 +5,13 @@ function ExpenseDate(props) {
   const year = props.date.getFullYear();
 
   return (
-    <>
-      <p>
-        {month} {day}
-      </p>
-      <p>{year}</p>
-    </>
+    <div className="card text-bg-secondary mb-3" style="max-width: 18rem;">
+      <div className="card-header">{month}</div>
+      <div className="card-body">
+        <h5 className="card-title">{day}</h5>
+        <p className="card-text">{year}</p>
+      </div>
+    </div>
   );
 }
 
