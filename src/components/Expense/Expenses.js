@@ -4,7 +4,7 @@ import ExpenseItem from "../Expense/ExpenseItem";
 function Expenses(props) {
   return (
     <Card>
-      <ExpenseItem item={props.item} />
+      <ExpenseItem item={props.item[0]} />
     </Card>
   );
 }
